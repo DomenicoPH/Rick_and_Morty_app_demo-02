@@ -67,6 +67,7 @@
         }
         &:hover .description{
             scale: 100% !important;
+            animation: gettingDark .5s ease;
         }
     }
     .box-content{
@@ -103,7 +104,7 @@
         background-color: rgba(32, 27, 61, 0.5);
         padding: 35px;
         margin-bottom: 5px;
-        transition: all .3s ease;
+        transition: all 0s ease;
     }
 
     .home-option-title{
@@ -118,7 +119,7 @@
         height: max-content;
         position: relative;
         bottom: 500px;
-        animation: scrollUpSomething 60s ease-in-out infinite;
+        animation: scrollUpSomething 10s ease-in-out infinite;
         filter: sepia(0%) blur(0px) brightness(90%);
         transition: filter .3s ease-out;
         &:hover{
@@ -128,6 +129,10 @@
             animation: none;
             bottom: 0;
         }
+    }
+
+    .bgImageReverse{
+        animation: scrollUpSomething 10s ease-in-out infinite;
     }
 
 }

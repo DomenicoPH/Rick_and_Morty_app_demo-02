@@ -9,7 +9,7 @@ const PopUpDetail = ({character, closePopup}) => {
 
                 <div className='popup-control'>
 
-                    <h2 className='detail-name'>({character.id}) {character.name}</h2>
+                    <h2 className='detail-name'>{character.name}</h2>
                     <div className='popup-close' onClick={closePopup}><img src={close} alt="close button" /></div>
 
                 </div>
@@ -21,6 +21,10 @@ const PopUpDetail = ({character, closePopup}) => {
                     </div>
 
                     <div className='popup-content-right'>
+
+                        <div className='detail-data'>
+                            <p className='detail-data-label'>Name:</p><p className='detail-data-info'>{character.name ? character.name : 'unknown'}</p>
+                        </div>
 
                         <div className='detail-data'>
                             <p className='detail-data-label'>Status:</p><p className='detail-data-info'>{character.status ? character.status : 'unknown'}</p>
@@ -41,11 +45,11 @@ const PopUpDetail = ({character, closePopup}) => {
                         <hr className='separator' />
 
                         <div className='detail-data dd-special'>
-                            <p className='detail-data-label'>First seen in (origin):</p><p className='detail-data-info'>{character.origin ? character.origin.name : 'unknown'}</p>
+                            <p className='detail-data-label'>First seen in (origin):</p><p className='detail-data-info ddi-special'>{character.origin ? character.origin.name : 'unknown'}</p>
                         </div>
 
                         <div className='detail-data dd-special'>
-                            <p className='detail-data-label'>Last known location:</p><p className='detail-data-info'>{character.location ? character.location.name : 'unknown'}</p>
+                            <p className='detail-data-label'>Last known location:</p><p className='detail-data-info ddi-special'>{character.location ? character.location.name : 'unknown'}</p>
                         </div>
 
                     </div>

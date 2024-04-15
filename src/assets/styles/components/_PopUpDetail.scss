@@ -12,7 +12,6 @@
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.45);
     animation: gettingDark .3s ease-in-out;
-    transition: all .3s ease-in-out;
     
     .popup-content{
         display: flex;
@@ -24,21 +23,24 @@
         padding: 25px;
         padding-top: 0;
         background-color: $rym-green;
-        border-radius: 25px;
-        border: 1px solid $purple-2;
+        border-radius: 10px;
+        border: 2px solid $dark-2;
         animation: popOut .6s ease;
 
         .popup-control{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-width: 40vw; //sum 40vw
+            padding: 10px 0px;
+            min-width: 100%;
 
             .detail-name{
                 font-family: 'rym';
+                text-shadow: 2px 2px 0px $rym-blue;
                 font-size: 2.5rem;
                 color: $purple-2;
-                padding: 25px;
+                padding: 1px 25px;
+                border-radius: 50px;
                 margin: 0;
                 text-align: center;
             }
@@ -50,9 +52,13 @@
                 height: 35px;
                 width: 35px;
                 margin-bottom: 25px;
+                margin-top: 10px;
+                box-shadow: 0px 0px 2px $rym-blue;
                 animation: beat 1s infinite;
+                transition: all .3s ease;
                 &:hover{
                     cursor: pointer;
+                    box-shadow: $dark-shadow;
                 }
             }
         }
@@ -72,12 +78,20 @@
                     height: 300px;
                     border-radius: 5px 5px 5px 15px;
                     box-shadow: $dark-shadow;
+                    border-radius: 250px;
+                    border: 4px solid $dark-2;
+                    transition: all .3s ease;
+                    &:hover{
+                        border-radius: 5px;
+                    }
                 }
             }
             .popup-content-right{
                 min-width: 21vw;//21vw
                 border-radius: 5px;
-                background-color: rgba(0, 0, 0, 0.04);
+                background-color: rgba(32, 27, 61, .95);
+                margin-left: 5px;
+                padding-top: 10px;
 
                 .separator{
                     border: 1px solid $rym-green;
@@ -86,26 +100,37 @@
                 .detail-data{
                     display: flex;
                     align-items: center;
-                    font-family: 'quest';
-                    font-size: 1.3rem;
+                    font-family: 'roboto';
+                    font-size: 1rem;
+                    margin-left: 5px;
 
                     .detail-data-label{
                         @include mp-reset;
                         padding: 5px;
-                        color: $purple-2;
-                        font-weight: lighter;
-                        opacity: 80%;
+                        margin-left: 5px;
+                        font-family: 'rym';
+                        font-size: .8rem;
+                        color: $rym-blue;
                     }
                     .detail-data-info{
                         @include mp-reset;
-                        padding: 5px;
-                        color: $dark-2;
-                        font-weight: bold;
+                        padding: 5px 0px;
+                        color: $rym-green;
+                        font-weight: lighter;
+                        text-shadow: 0px 0px 3px yellowgreen;
+                        letter-spacing: 1px;
+                        font-style: italic;
+                        font-size: 1.1rem;
+                        padding-right: 15px;
                     }
                 }
                 .dd-special{
-                    display: flex;
                     flex-direction: column;
+                    align-items: flex-start;
+                    
+                    .ddi-special{
+                        padding-left: 10px;
+                    }
                 }
     
             }

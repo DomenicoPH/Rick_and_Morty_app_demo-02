@@ -1,7 +1,6 @@
 <img src='./public/rym-rrs-demo.png' alt='demo image'>
 
-# Start  
-# React + Vite
+# React + Vite + Redux + Sass
 
 ## Vite:  
 https://vitejs.dev/
