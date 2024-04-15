@@ -1,0 +1,17 @@
+@import '../utils/variables';
+
+.loadingMainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: $rym-green;
+
+    .loadingText{
+        font-family: 'quest';
+        font-weight: bolder;
+        font-size: 2rem;
+        color: $purple-2;
+    }
+}

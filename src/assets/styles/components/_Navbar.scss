@@ -1,0 +1,31 @@
+@import '../utils/variables';
+@import '../utils/animaciones';
+
+.Navbar-container{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+    width: 100vw;
+    background-color: $purple-2;
+    animation: fallDown .3s ease-out;
+
+    .left{
+        margin-left: 50px;
+        .logo{
+            scale: 125%;
+            cursor: pointer;
+            height: 50px;
+            &:hover{
+                filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
+            }
+        }
+    }
+    .center{
+
+    }
+    .right{
+        margin-right: 50px;
+    }
+}

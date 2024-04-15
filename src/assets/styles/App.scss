@@ -1,0 +1,10 @@
+@import 'normalize.css/normalize';
+@import 'utils/variables';
+
+.AppContainer{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100vh;
+    background-color: $rym-green;
+}

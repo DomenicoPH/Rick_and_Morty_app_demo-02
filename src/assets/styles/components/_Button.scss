@@ -1,0 +1,64 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.button{
+    border: none;
+    outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin: 2px;
+
+&.button-type-1{
+    @include button-styles($rym-blue, 'roboto', $rym-green, 10px 20px);
+    box-shadow: $light-shadow;
+    letter-spacing: .5rem;
+    padding-left: calc(20px + 10px);
+    &:hover{
+        background-color: $purple-2;
+        box-shadow: $darkest-shadow;
+        letter-spacing: .75rem;
+        padding-left: calc(25px + 10px);
+    }
+}
+
+&.button-type-2{
+    @include button-styles($green-1, 'rym', $purple-2, 10px 16px);
+    border-radius: 100px;
+    box-shadow: $lighter-shadow;
+    font-size: 1rem;
+    &:hover{
+        box-shadow: $darker-shadow;
+        
+    }
+}
+
+&.button-type-3{
+    @include button-styles($purple-2, 'quest', $rym-green, 10px 15px);
+    min-width: 100px;
+    &:hover{
+        background-color: $dark-1;
+        box-shadow: $dark-shadow;
+    }
+}
+
+&.button-type-4{
+    @include button-styles($purple-2, 'roboto', $rym-green, 10px 25px);
+    background-color: rgba(44, 36, 94, 0.95);
+    width: 200px;
+    &:hover{
+        background-color: rgba(44, 36, 94, 1);
+        letter-spacing: .2rem;
+    }
+}
+
+&.button-type-nav{
+    @include button-styles(rgba(0, 0, 0, 0), 'rym', $rym-green, 5px);
+    letter-spacing: .2rem;
+    &:hover{
+        text-shadow: 0px 0px 1px $rym-green;
+        color: $rym-blue;
+    }
+}
+
+}

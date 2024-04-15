@@ -1,0 +1,114 @@
+@import '../utils/variables';
+@import '../utils/animaciones';
+@import '../utils/mixins';
+
+.popup-container{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    animation: gettingDark .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    
+    .popup-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+/*         min-height: 80vh;
+        min-width: 70vw; */
+        padding: 25px;
+        padding-top: 0;
+        background-color: $rym-green;
+        border-radius: 25px;
+        border: 1px solid $purple-2;
+        animation: popOut .6s ease;
+
+        .popup-control{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 40vw; //sum 40vw
+
+            .detail-name{
+                font-family: 'rym';
+                font-size: 2.5rem;
+                color: $purple-2;
+                padding: 25px;
+                margin: 0;
+                text-align: center;
+            }
+
+            .popup-close{
+                display: flex;
+                background-color: $purple-2;
+                border-radius: 100px;
+                height: 35px;
+                width: 35px;
+                margin-bottom: 25px;
+                animation: beat 1s infinite;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .popup-content-info{
+            display: flex;
+            justify-content: center;
+
+            .popup-content-left{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 19vw;//19vw
+            
+                .detail-image{
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 5px 5px 5px 15px;
+                    box-shadow: $dark-shadow;
+                }
+            }
+            .popup-content-right{
+                min-width: 21vw;//21vw
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0.04);
+
+                .separator{
+                    border: 1px solid $rym-green;
+                }
+
+                .detail-data{
+                    display: flex;
+                    align-items: center;
+                    font-family: 'quest';
+                    font-size: 1.3rem;
+
+                    .detail-data-label{
+                        @include mp-reset;
+                        padding: 5px;
+                        color: $purple-2;
+                        font-weight: lighter;
+                        opacity: 80%;
+                    }
+                    .detail-data-info{
+                        @include mp-reset;
+                        padding: 5px;
+                        color: $dark-2;
+                        font-weight: bold;
+                    }
+                }
+                .dd-special{
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+            }
+        }
+    }
+}

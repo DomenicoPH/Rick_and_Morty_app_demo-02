@@ -1,0 +1,48 @@
+//color
+$green-1: greenyellow;
+$green-2: yellowgreen;
+$purple-1: blueviolet;
+$purple-2: darkslateblue;
+
+$danger: red;
+
+$dark-1: rgb(44, 36, 94);
+$dark-2: rgb(32, 27, 61);
+
+$light-1: rgb(215, 216, 197);
+$light-2: rgb(234, 234, 224);
+
+$rym-blue: rgb(66, 180, 202);
+$rym-green: rgb(191, 222, 66);
+
+//fonts
+@font-face {
+    font-family: 'rym';
+    src: url('../../fonts/get_schwifty.ttf');
+}
+@font-face {
+    font-family: 'archivo';
+    src: url('../../fonts/Archivo-VariableFont_wdth_wght.ttf');
+}
+@font-face {
+    font-family: 'quest';
+    src: url('../../fonts/Questrial-Regular.ttf');
+}
+@font-face {
+    font-family: 'roboto-bold';
+    src: url('../../fonts/roboto/Roboto-Bold.ttf');
+}
+
+//shadow
+$dark-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+$darker-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+$darkest-shadow: 0px 0px 5px rgba(0,0,0,0.8); 
+$mid-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+$light-shadow: 0px 0px 5px rgba(0,0,0,0.35);
+$lighter-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+$lightest-shadow: 0px 0px 5px rgba(0,0,0,0.10);
+
+//images
+$bg-img-01: 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712428828/rick_and_morty/sc01_dr7tdr.png';                     //Morty broken legs
+$bg-img-02: 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712428823/rick_and_morty/sc06_qewdel.png';                     //Family house
+$bg-img-03: 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712428826/rick_and_morty/sc03_xdbasq.png';                     //Meseek at school

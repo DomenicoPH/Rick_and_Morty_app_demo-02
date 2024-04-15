@@ -1,0 +1,19 @@
+@import '../utils/variables';
+
+.sb_container{
+    display: flex;
+    align-items: center;
+    margin: 0px 5px;
+    
+    .sb_input{
+        height: 36px;
+        border: none;
+        border-radius: 4px;
+        padding-left: 10px;
+        font-family: 'quest';
+        background-color: $green-2;
+    }
+    .sb_button{
+
+    }
+}

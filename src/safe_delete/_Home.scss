@@ -1,0 +1,95 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/animaciones';
+@import '../utils/breakpoints';
+
+.Home-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .spacer{
+        min-height: 75px;
+        min-width: 100vw;
+    }
+
+    .welcome-box{
+        display: flex;
+        justify-content: center;
+        .welcome{
+            @include title-1('rym',1rem, $purple-2);
+            padding: 25px;
+            font-weight: 900;
+        }
+    }
+
+    .box-1{
+        @include box-properties($purple-2, $bg-img-01, 2px solid $purple-2);
+        height: calc(100vh / 4);
+        background-position: 0px -650px;
+        animation: popOut .5s ease-out;
+    }
+    .box-2{
+        @include box-properties($purple-2, $bg-img-02, 2px solid $purple-2);
+        height: calc(100vh / 4);
+        background-position: 0px -200px;
+        animation: popOut .7s ease-out;
+    }
+    .box-3{
+        @include box-properties($purple-2, $bg-img-03, 2px solid $purple-2);
+        height: calc(100vh / 4);
+        background-position: 0px -400px;
+        animation: popOut .9s ease-out;
+    }
+
+    .box-1, .box-2, .box-3{
+        position: relative;
+        overflow: hidden;
+        opacity: 90%;
+        max-width: 450px;
+        &:hover{
+            opacity: 100%;
+        }
+        &:hover .bgImage{
+            filter: sepia(100%) blur(2px) brightness(75%);
+        }
+        &:hover .button{
+            scale: 120% !important;
+        }
+    }
+    .box-content{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Asegura que el botón esté encima de la caja */
+    }
+
+    .button{
+        scale: 0% !important;
+        &:hover{
+            box-shadow: 0px 0px 120px $rym-green;
+        }
+    }
+
+    .bgImage{
+        display: flex;
+        width: 100%;
+        height: max-content;
+        position: relative;
+        bottom: 500px;
+        animation: scrollUpSomething 80s linear infinite;
+        filter: sepia(0%) blur(0px) brightness(90%);
+        transition: filter .3s ease-out;
+        &:hover{
+            filter: sepia(100%);
+        }
+        @include respond-to('custom'){
+            animation: none;
+            bottom: 0;
+        }
+    }
+
+}

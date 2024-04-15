@@ -1,0 +1,44 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../utils/animaciones';
+
+.Landing-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+
+    .header{
+        display: flex;
+    }
+
+    .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image-small{
+            @include image-sizes(450px, auto);
+            animation: rotate360 300s linear infinite;
+        }
+    }
+
+    .footer{
+        display: flex;
+        padding-bottom: 10px;
+        transition: all .3s ease-out;
+        .footer-text{
+            font-family: 'rym';
+            font-weight: 600;
+            color: $purple-2;
+            opacity: 15%;
+            transition: all .3s ease-out;
+        &:hover{
+            opacity: 100%;
+            scale: 120%;
+        }
+        }
+    }
+}

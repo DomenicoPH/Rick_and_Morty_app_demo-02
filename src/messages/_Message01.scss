@@ -1,0 +1,52 @@
+@import '../assets/styles/utils/variables';
+@import '../assets/styles/utils/animaciones';
+
+.message01container{
+    position: fixed;
+    background-color: rgba(71, 61, 139, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+    .m01image{
+        position: absolute;
+        display: flex;
+        opacity: 10%;
+        filter: brightness(90%);
+        z-index: 0;
+    }
+
+    .m01textContainer{
+        background-color: rgba(191, 222, 66, 0.95);
+        border: 2px solid $purple-2;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+        position: fixed;
+        color: $dark-1;
+        padding: 50px 100px;
+        margin: 50px;
+        border-radius: 5px;
+        z-index: 1;
+        animation: popOut .75s ease-out;
+
+        .m01mainText{
+            font-family: 'quest';
+            font-size: 1.5rem;
+        }
+        .instructionBox{
+            display: flex;
+            align-items: center;
+        }
+        .m01text{
+            font-family: 'quest';
+            font-size: 1.5rem;
+            margin-left: 12px;
+        }
+    }
+
+}

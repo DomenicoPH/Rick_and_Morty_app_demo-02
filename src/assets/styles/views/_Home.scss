@@ -1,0 +1,133 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/animaciones';
+@import '../utils/breakpoints';
+
+.Home-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .spacer{
+        min-height: 75px;
+        min-width: 100vw;
+    }
+
+    .welcome-box{
+        display: flex;
+        justify-content: center;
+        .welcome{
+            @include title-1('rym',1rem, $purple-2);
+            padding: 25px;
+            font-weight: 900;
+        }
+    }
+
+    .box-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-1{
+        @include box-properties($purple-2, $bg-img-01, 2px solid $purple-2);
+        height: calc(100vh / 4);
+        background-position: 0px -650px;
+        animation: popOut .5s ease-out;
+    }
+    .box-2{
+        @include box-properties($purple-2, $bg-img-02, 2px solid $purple-2);
+        height: calc(100vh / 4);
+        background-position: 0px -200px;
+        animation: popOut .7s ease-out;
+    }
+    .box-3{
+        @include box-properties($purple-2, $bg-img-03, 2px solid $purple-2);
+        height: calc(100vh / 4);
+        background-position: 0px -400px;
+        animation: popOut .9s ease-out;
+    }
+
+    .box-1, .box-2, .box-3{
+        position: relative;
+        overflow: hidden;
+        opacity: 90%;
+        margin: 3px 25vw;
+        &:hover{
+            opacity: 100%;
+            border: -25px solid $purple-2;
+        }
+        &:hover .bgImage{
+            filter: sepia(100%) blur(2px) brightness(65%);
+        }
+        &:hover .button{
+            scale: 100% !important;
+        }
+        &:hover .description{
+            scale: 100% !important;
+        }
+    }
+    .box-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Asegura que el botón esté encima de la caja */
+    }
+
+    .button{
+        margin: 10px;
+        scale: 0% !important;
+        &:hover{
+            box-shadow: 0px 0px 120px $rym-green;
+        }
+    }
+    .description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'quest';
+        color: $rym-green;
+        text-align: center;
+        scale: 0;
+        width: 1000px;
+        height: 200px;
+        border-radius: 4px;
+        background-color: rgba(32, 27, 61, 0.5);
+        padding: 35px;
+        margin-bottom: 5px;
+        transition: all .3s ease;
+    }
+
+    .home-option-title{
+        margin: 0;
+        padding: 10px;
+        font-family: 'rym';
+    }
+
+    .bgImage{
+        display: flex;
+        width: 100%;
+        height: max-content;
+        position: relative;
+        bottom: 500px;
+        animation: scrollUpSomething 60s ease-in-out infinite;
+        filter: sepia(0%) blur(0px) brightness(90%);
+        transition: filter .3s ease-out;
+        &:hover{
+            filter: sepia(100%);
+        }
+        @include respond-to('custom'){
+            animation: none;
+            bottom: 0;
+        }
+    }
+
+}

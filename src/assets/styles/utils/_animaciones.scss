@@ -1,0 +1,76 @@
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@mixin anim-fadeIn {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes dropShadowAnimation {
+  0%, 100% {
+    filter: drop-shadow(0px 0px 5px $green-1);
+  }
+  50% {
+    filter: drop-shadow(0px 0px 25px $dark-1);
+  }
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  
+@keyframes fallDown {
+  0%{
+    top: -100px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+
+/* @keyframes scrollUpSomething {
+  0%{ scale: 100% }
+  50%{ scale: 120% }
+  100%{ scale: 100% }
+}
+ */
+@keyframes scrollUpSomething {
+  0%{ bottom: 100% }
+  50%{ bottom: 75% }
+  100%{ bottom: 100% }
+}
+
+@keyframes popOut {
+  0%{ scale: 0% }
+  50%{ scale: 110% }
+  100%{ scale: 100% }
+}
+
+@keyframes popOutSmall {
+  0%{ scale: 50% }
+  50%{ scale: 101.8% }
+  100%{ scale: 100% }
+}
+
+@keyframes beat {
+  0%{
+    scale: 100%
+  }
+  50%{
+    scale: 120%;
+  }
+  100%{
+    scale: 100%;
+  }
+}
+
+@keyframes gettingDark {
+  0%{opacity: 0%;}
+  100%{opacity: 100%;}
+}
