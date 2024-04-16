@@ -10,6 +10,11 @@
   margin: 0;
 }
 
+@mixin mp($margin, $padding){
+  margin: $margin;
+  padding: $padding;
+}
+
 //complex
 @mixin button-styles($bg-color, $font, $text-color, $padding){
     background-color: $bg-color;

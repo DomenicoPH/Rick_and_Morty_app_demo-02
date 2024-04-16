@@ -1,0 +1,83 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../utils/animaciones';
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    color: $purple-2;
+    font-family: 'rym';
+    background-color: $rym-green;
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+/* 
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 2px solid $purple-2;
+        border-radius: 15px;
+        padding: 50px;
+        box-shadow: $darker-shadow;
+ */
+        transition: all .3s ease;
+        animation: popOut 1s ease;
+
+        .about-separator{
+            border: 1px solid $purple-2;
+            min-width: 400px;
+            margin-bottom: 15px
+        }
+    
+        .about-text{
+            @include mp(1px, 1px);
+            font-family: 'quest';
+        }
+        .about-ul{
+            @include mp(1px, 1px);
+            padding-top: 10px;
+            text-align: left;
+            display: flex;
+            list-style: none;
+    
+            .about-li{
+                background-color: $purple-2;
+                color: $rym-green;
+                margin: 0px 1px;
+                padding: 5px 10px;
+                font-family: 'quest';
+                &:hover{
+                    height: 105%;
+                }
+            }
+        }
+    
+        .about-gnomono-logo{
+            height: 250px;
+            width: 250px;
+            filter: 
+                drop-shadow(0 0 2px rgba(10, 10, 10, 0.4)) 
+                hue-rotate(152deg) 
+                brightness(37%) 
+                saturate(275%);
+            transition: all .3s ease;
+            &:hover{
+                filter: drop-shadow(0 3px 2px rgb(10, 10, 10, 0.4))
+                hue-rotate(152deg) 
+                brightness(37%) 
+                saturate(275%);
+                scale: 101%;
+            }
+        }
+    }
+
+    .about-link{
+        color: $purple-2;
+        font-weight: 900;
+        text-decoration: none;
+        animation: beat 2s ease infinite;
+    }
+}

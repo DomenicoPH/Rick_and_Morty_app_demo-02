@@ -1,7 +1,7 @@
 import './_Message01.scss'
 import Button from '../components/Button'
 
-const image = 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712534626/rick_and_morty/rym04_rm1flt.jpg'
+const image = 'https://res.cloudinary.com/dhaiensb8/image/upload/v1712534625/rick_and_morty/rym00_aubkzv.jpg'
 
 const Message01 = () => {
 

@@ -17,7 +17,7 @@
     .m01image{
         position: absolute;
         display: flex;
-        opacity: 10%;
+        opacity: 90%;
         filter: brightness(90%);
         z-index: 0;
     }
@@ -28,15 +28,15 @@
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
         position: fixed;
         color: $dark-1;
-        padding: 50px 100px;
-        margin: 50px;
+        padding: 25px 50px;
+        margin: 25px;
         border-radius: 5px;
         z-index: 1;
         animation: popOut .75s ease-out;
 
         .m01mainText{
             font-family: 'quest';
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         .instructionBox{
             display: flex;
@@ -44,7 +44,7 @@
         }
         .m01text{
             font-family: 'quest';
-            font-size: 1.5rem;
+            font-size: 1rem;
             margin-left: 12px;
         }
     }
