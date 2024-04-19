@@ -6,7 +6,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: 2px solid $dark-1;
     border-radius: 5px;
@@ -21,7 +21,7 @@
     transition: all .3s ease-out;
     &:hover{
         border-radius: 60px 60px 0px 60px;
-        border: 2px solid $rym-green;
+        justify-content: center;
     }
     &:hover .episode-card-bg-image{
         -webkit-filter: opacity(50%);
@@ -48,6 +48,7 @@
     .episode-bullseye{
         display: none;
         transition: all .3s ease-in-out;
+        padding: 1px;
         &:hover{
             scale: 450%;
             background-color: $purple-2;

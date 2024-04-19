@@ -1,4 +1,5 @@
 import '../assets/styles/components/_EpisodeControl.scss';
+import down from '../assets/img/down.svg';
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { filterEpisodeBySeason } from "../redux/actions";
@@ -8,8 +9,8 @@ const EpisodeControl = () => {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
 
-    const handleOrder = (order) => {
-        dispatch(filterEpisodeBySeason(order));
+    const handleFilterBySeason = (season) => {
+        dispatch(filterEpisodeBySeason(season));
         setIsOpen(false);
     }
 
@@ -21,19 +22,19 @@ const EpisodeControl = () => {
         { label: "Season 5", value: "S5" }
     ];
 
-    return(
+    return (
         <div className='episode-control'>
-            esto es EpisodeControl
-            <div className={`dropdown ${isOpen ? 'open' : ''}`}>
+            <div className="custom-dropdown">
                 <div className="dropdown-toggle" onClick={() => setIsOpen(!isOpen)}>
-                    Order By
+                    Season
+                    <img className='dropdown-arrow' src={down} alt="" />
                 </div>
-                <div className="dropdown-menu">
+                <div className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
                     {options.map(option => (
                         <div
                             key={option.value}
                             className="dropdown-item"
-                            onClick={() => handleOrder(option.value)}
+                            onClick={() => handleFilterBySeason(option.value)}
                         >
                             {option.label}
                         </div>
@@ -41,7 +42,7 @@ const EpisodeControl = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default EpisodeControl;
