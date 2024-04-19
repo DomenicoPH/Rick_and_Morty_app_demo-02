@@ -17,13 +17,19 @@
     max-height: 180px;
     min-width: 180px;
     min-height: 180px;
+    overflow: hidden;
     transition: all .3s ease-out;
+    &:hover .episode-card-bg-image{
+        -webkit-filter: opacity(50%);
+        cursor: pointer;
+    }
 
     .episode-name{
         font-family: 'rym';
         font-size: 1.4rem;
         color: $rym-green;
         text-align: center;
+        z-index: 1;
     }
 
     .episode-code{
@@ -31,5 +37,17 @@
         font-size: .8rem;
         color: $rym-green;
         letter-spacing: .2rem;
+        z-index: 1;
+    }
+
+    .episode-card-bg-image{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: -260px;
+        width: fit-content;
+        z-index: 0;
+        -webkit-filter: opacity(0%);
+        transition: all .3s ease;
     }
 }
