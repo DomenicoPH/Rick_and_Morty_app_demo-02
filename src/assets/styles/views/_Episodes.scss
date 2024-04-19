@@ -1,0 +1,32 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.episode-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 100vw;
+    padding-top: 80px;
+
+    .episodesGallery{
+        @include scrollbarConfig;
+        display: flex;
+        /* max-height: 700px; */
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 5px 25px;
+        border: 2px solid $purple-2;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        background-color: $rym-green;
+        min-height: calc(100vh - 275px);
+        max-height: calc(100vh - 275px);
+        filter: brightness(90%);
+        transition: all .5s ease-out;
+        animation: popOutSmall .75s ease-out;
+        &:hover{
+            filter: brightness(100%);
+        }
+    }
+
+}

@@ -16,6 +16,7 @@ const initialState = {
     //estados editables
     myCharacters: [],
     myFavoriteCharacters: [],
+    myEpisodes: [],
 }
 
 const reducer = (state = initialState, action) => {

@@ -1,9 +1,10 @@
-import '../assets/styles/views/_Locations.scss'
+import '../assets/styles/views/_Locations.scss';
+import LocationControl from '../components/LocationControl';
 
 const Locations = () => {
     return(
-        <div>
-
+        <div className='location-container'>
+            <LocationControl />
         </div>
     )
 }

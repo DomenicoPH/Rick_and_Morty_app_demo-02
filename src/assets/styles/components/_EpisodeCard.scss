@@ -1,0 +1,35 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/animaciones';
+
+.episode-card-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid $dark-1;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 10px;
+    background-color: $purple-2;
+    max-width: 180px;
+    max-height: 180px;
+    min-width: 180px;
+    min-height: 180px;
+    transition: all .3s ease-out;
+
+    .episode-name{
+        font-family: 'rym';
+        font-size: 1.4rem;
+        color: $rym-green;
+        text-align: center;
+    }
+
+    .episode-code{
+        font-family: 'quest';
+        font-size: .8rem;
+        color: $rym-green;
+        letter-spacing: .2rem;
+    }
+}

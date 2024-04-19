@@ -1,0 +1,20 @@
+@import '../utils/variables';
+@import '../utils/animaciones';
+
+.episode-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    margin: 5px 25px;
+    border: 2px solid $purple-2;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: $rym-green;
+    filter: brightness(90%);
+    transition: all .5s ease-out;
+    animation: popOutSmall .75s ease-out;
+    &:hover{
+        filter: brightness(100%);
+    }
+}

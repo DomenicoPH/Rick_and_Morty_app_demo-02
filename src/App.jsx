@@ -24,8 +24,8 @@ function App() {
   const { 
     allCharacters, 
     allEpisodes, 
-    allLocations,
-    myCharacters } = useSelector(state => state);
+    allLocations 
+  } = useSelector(state => state);
     
   const dispatch = useDispatch()
 
