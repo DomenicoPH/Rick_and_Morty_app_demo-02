@@ -6,6 +6,8 @@ import {
     CLEAR_ALL_CHARACTERS,
     GET_ALL_CHARACTERS,
     CLOSE_CHARACTER,
+    SET_MY_EPISODES,
+    FILTER_EPISODES_BY_SEASON,
 } from './actions'
 
 const initialState = {
@@ -17,6 +19,7 @@ const initialState = {
     myCharacters: [],
     myFavoriteCharacters: [],
     myEpisodes: [],
+    filteredEpisodes: [],
 }
 
 const reducer = (state = initialState, action) => {
@@ -58,6 +61,18 @@ const reducer = (state = initialState, action) => {
             return{
                 ...state,
                 myCharacters: [ ...state.myCharacters.filter((char) => char.id !== action.payload)]
+            }
+        case SET_MY_EPISODES:
+            return{
+                ...state,
+                myEpisodes: action.payload
+            }
+        case FILTER_EPISODES_BY_SEASON:
+            const season = action.payload;
+            filteredEpisodes = state.allEpisodes.filter(episode => episode)
+            return{
+                ...state,
+                myEpisodes: filteredEpisodes,
             }
         default:
             return{

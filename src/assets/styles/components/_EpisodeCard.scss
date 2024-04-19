@@ -19,9 +19,22 @@
     min-height: 180px;
     overflow: hidden;
     transition: all .3s ease-out;
+    &:hover{
+        border-radius: 60px 60px 0px 60px;
+        border: 2px solid $rym-green;
+    }
     &:hover .episode-card-bg-image{
         -webkit-filter: opacity(50%);
+    }
+    &:hover .episode-bullseye{
+        display: flex;
+        z-index: 1;
+        scale: 350%;
         cursor: pointer;
+        position: absolute;
+        top: 95%;
+        left: 95%;
+        animation: pulse 1s ease-in-out infinite;
     }
 
     .episode-name{
@@ -30,6 +43,16 @@
         color: $rym-green;
         text-align: center;
         z-index: 1;
+    }
+
+    .episode-bullseye{
+        display: none;
+        transition: all .3s ease-in-out;
+        &:hover{
+            scale: 450%;
+            background-color: $purple-2;
+            border-radius: 100px;
+        }
     }
 
     .episode-code{

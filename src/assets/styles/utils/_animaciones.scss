@@ -59,15 +59,15 @@
 }
 
 @keyframes beat {
-  0%{
-    scale: 100%
-  }
-  50%{
-    scale: 120%;
-  }
-  100%{
-    scale: 100%;
-  }
+  0%{scale: 100%}
+  50%{scale: 120%}
+  100%{scale: 100%}
+}
+
+@keyframes pulse {
+  0%{scale: 350%}
+  50%{scale: 450%}
+  100%{scale: 350%}
 }
 
 @keyframes gettingDark {
