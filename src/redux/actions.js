@@ -7,6 +7,7 @@ export const GET_ALL_CHARACTERS = 'GET_ALL_CHARACTERS';
 export const CLOSE_CHARACTER = 'CLOSE_CHARACTER';
 export const SET_MY_EPISODES = 'SET_MY_EPISODES';
 export const FILTER_EPISODES_BY_SEASON = 'FILTER_EPISODES_BY_SEASON';
+export const GET_ALL_EPISODES = 'GET_ALL_EPISODES';
 
 export const setAllCharacters = (characters) => ({
     type: SET_ALL_CHARACTERS,
@@ -49,4 +50,8 @@ export const setMyEpisodes = (episodes) => ({
 export const filterEpisodeBySeason = (season) => ({
     type: FILTER_EPISODES_BY_SEASON,
     payload: season,
+})
+
+export const getAllEpisodes = () => ({
+    type: GET_ALL_EPISODES,
 })

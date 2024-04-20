@@ -8,6 +8,7 @@ import {
     CLOSE_CHARACTER,
     SET_MY_EPISODES,
     FILTER_EPISODES_BY_SEASON,
+    GET_ALL_EPISODES,
 } from './actions'
 
 const initialState = {
@@ -69,10 +70,15 @@ const reducer = (state = initialState, action) => {
             }
         case FILTER_EPISODES_BY_SEASON:
             const season = action.payload;
-            filteredEpisodes = state.allEpisodes.filter(episode => episode)
+            const filteredEpisodes = state.allEpisodes.filter(episode => episode.episode[2] === season)
             return{
                 ...state,
                 myEpisodes: filteredEpisodes,
+            }
+        case GET_ALL_EPISODES:
+            return{
+                ...state,
+                myEpisodes: state.allEpisodes
             }
         default:
             return{

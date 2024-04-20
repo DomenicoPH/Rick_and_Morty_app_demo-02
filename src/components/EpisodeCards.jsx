@@ -4,11 +4,11 @@ import EpisodeCard from './EpisodeCard';
 
 const EpisodeCards = () => {
 
-    const allEpisodes = useSelector(state => state.allEpisodes);
+    const myEpisodes = useSelector(state => state.myEpisodes);
 
     return(
         <div className='episode-cards-container'>
-            {allEpisodes && allEpisodes.map(ep => (
+            {myEpisodes && myEpisodes.map(ep => (
                 <EpisodeCard 
                     key={ep.id}
                     id={ep.id}
