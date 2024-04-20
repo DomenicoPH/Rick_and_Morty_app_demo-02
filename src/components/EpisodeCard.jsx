@@ -7,7 +7,7 @@ const EpisodeCard = (props) => {
     return(
         <div className='episode-card-container'>
             <p className='episode-name'>{props.name}</p>
-            <img className='episode-bullseye' src={bullseye} alt="link to episode detail" />
+            <img className='episode-bullseye' src={bullseye} alt="link to episode detail" onClick={() => props.onEpisodeClick()}/>
             <p className='episode-code'>{props.code}</p>
             <div className='episode-card-bg-image'><img src={bg} alt="bg image" /></div>
             <div className='episode-card-bg-image'><img src={bg} alt="bg image" /></div>

@@ -4,6 +4,7 @@ import EpisodeCards from '../components/EpisodeCards';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMyEpisodes } from '../redux/actions';
+import PopUpEpisode from '../components/PopUpEpisode';
 
 const Episodes = () => {
 
@@ -29,10 +30,17 @@ const Episodes = () => {
 
     return(
         <div className='episode-container'>
+            
             <EpisodeControl />
+
             <div className='episodesGallery'>
-                <EpisodeCards />
+                <EpisodeCards onEpisodeClick={handleEpisodeClick}/>
             </div>
+
+            {popUpOpen && selectedEpisode && (
+                <PopUpEpisode episode={selectedEpisode} closePopup={handleClosePopup}/>
+            )}
+
         </div>
     )
 }

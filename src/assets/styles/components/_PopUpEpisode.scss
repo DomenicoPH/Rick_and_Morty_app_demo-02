@@ -1,0 +1,116 @@
+@import '../utils/animaciones';
+@import '../utils/variables';
+
+.popup-ep-container{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    animation: gettingDark .3s ease-in-out;
+    z-index: 2;
+
+    .popup-ep-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        padding-top: 0;
+        background-color: $rym-green;
+        border-radius: 10px;
+        border: 2px solid $dark-2;
+        animation: popOut .6s ease;
+
+        .popup-ep-control{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px;
+            min-width: 100%;
+
+            .detail-ep-code{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $purple-2;
+                font-family: 'quest';
+                font-size: 1rem;
+                font-weight: 100;
+                color: $rym-green;
+                padding: 10px 25px;
+                border-radius: 5px;
+                margin: 0;
+                opacity: 5%;
+                text-align: center;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    opacity: 100%;
+                }
+            }
+        
+            .popup-ep-close{
+                display: flex;
+                background-color: $purple-2;
+                border-radius: 100px;
+                height: 35px;
+                width: 35px;
+                margin-bottom: 25px;
+                margin-top: 10px;
+                box-shadow: 0px 0px 2px $rym-blue;
+                animation: beat 1s infinite;
+                transition: all .3s ease;
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: $dark-shadow;
+                }
+            }
+        }
+
+        .popup-content-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 50vw;
+
+            .detail-ep-name{
+                font-family: 'rym';
+                text-shadow: 2px 2px 0px $rym-blue;
+                font-size: 2.5rem;
+                color: $purple-2;
+                padding: 20px 0px;
+                border-radius: 50px;
+                margin: auto;
+                width: 100%;
+                text-align: center;
+            }
+
+            .detail-ep-databox{
+                
+                .detail-ep-data{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'rym';
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: $purple-2;
+                    padding: 10px 25px;
+                    border-radius: 5px;
+                    margin: 0;
+                    padding: 2px;
+                    text-align: center;
+                }
+            }
+
+        }
+    
+        
+    }
+
+    
+}
