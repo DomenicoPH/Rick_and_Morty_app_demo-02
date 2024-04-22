@@ -29,6 +29,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include respond-to('lg'){
+            flex-direction: row;
+            margin: 0 5vw
+        }
+        @include respond-to('md'){
+            flex-direction: row;
+            margin: 0 5vw
+        }
+        @include respond-to('sm'){
+            flex-direction: row;
+            margin: 0 5vw
+        }
     }
 
     .box-1{
@@ -69,6 +81,18 @@
             scale: 100% !important;
             animation: gettingDark .5s ease;
         }
+        @include respond-to('lg'){
+            margin: 5px;
+            min-height: 70vh;
+        }
+        @include respond-to('md'){
+            margin: 5px;
+            min-height: 70vh;
+        }
+        @include respond-to('sm'){
+            margin: 5px;
+            min-height: 70vh;
+        }
     }
     .box-content{
         display: flex;
@@ -105,6 +129,22 @@
         padding: 35px;
         margin-bottom: 5px;
         transition: all 0s ease;
+
+        @include respond-to('lg'){
+            min-height: 70vh;
+            width: auto;
+            padding: 50px;
+        }
+        @include respond-to('md'){
+            min-height: 70vh;
+            width: auto;
+            padding: 50px;
+        }
+        @include respond-to('sm'){
+            min-height: 70vh;
+            width: auto;
+            padding: 50px;
+        }
     }
 
     .home-option-title{
@@ -128,6 +168,27 @@
         @include respond-to('custom'){
             animation: none;
             bottom: 0;
+        }
+        @include respond-to('xxl'){
+            bottom: 150px;
+        }
+        @include respond-to('xl'){
+            bottom: 150px;
+        }
+        @include respond-to('lg'){
+            bottom: 0;
+            height: 100%;
+            width: auto;
+        }
+        @include respond-to('md'){
+            bottom: 0;
+            height: 100%;
+            width: auto;
+        }
+        @include respond-to('sm'){
+            bottom: 0;
+            height: 100%;
+            width: auto;
         }
     }
 

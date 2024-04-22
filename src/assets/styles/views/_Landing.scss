@@ -23,6 +23,10 @@
             @include image-sizes(450px, auto);
             animation: rotate360 300s linear infinite;
         }
+
+        .button{
+            z-index: 1;
+        }
     }
 
     .footer{

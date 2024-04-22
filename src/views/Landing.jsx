@@ -20,7 +20,7 @@ const Landing = () => {
 
             <div className="center">
                 <img className="image-small" src={logo} alt="Rick & Morty" />
-                <Button type='type-1' text={'Enter'} onClick={goHome} />
+                <Button className='button' type='type-1' text={'Enter'} onClick={goHome} />
             </div>
 
             <div className="footer">
