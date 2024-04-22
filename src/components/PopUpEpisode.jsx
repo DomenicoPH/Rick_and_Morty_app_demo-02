@@ -1,7 +1,10 @@
 import '../assets/styles/components/_PopUpEpisode.scss';
 import close from '../assets/img/close.svg'
+import episodeDescriptions from '../extra/data';
 
 const PopUpEpisode = ({episode, closePopup}) => {
+
+    const description = episodeDescriptions[episode.episode]
     return(
         <div className='popup-ep-container'>
 
@@ -20,8 +23,8 @@ const PopUpEpisode = ({episode, closePopup}) => {
 
                     <div className='detail-ep-databox'>
 
-                        <h2 className='detail-ep-data'>Season: {episode.episode.slice(2,3)} - Episode: {episode.episode.slice(4,6)}</h2>
-                        <h2 className='detail-ep-data'></h2>
+                        <h2 className='detail-ep-data'>Season: {episode.episode.slice(2,3)} Episode: {episode.episode.slice(4,6)}</h2>
+                        <h2 className='detail-ep-description'>{description}</h2>
                         <h2 className='detail-ep-data'>Air date: {episode.air_date}</h2>
 
                     </div>

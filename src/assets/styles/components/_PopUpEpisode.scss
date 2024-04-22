@@ -41,10 +41,12 @@
                 font-size: 1rem;
                 font-weight: 100;
                 color: $rym-green;
-                padding: 10px 25px;
+                padding: 5px;
                 border-radius: 5px;
                 margin: 0;
-                opacity: 5%;
+                margin-top: -10px;
+                width: 90%;
+                opacity: 15%;
                 text-align: center;
                 transition: all .3s ease-in-out;
                 &:hover{
@@ -103,6 +105,25 @@
                     border-radius: 5px;
                     margin: 0;
                     padding: 2px;
+                    text-align: center;
+                }
+
+                .detail-ep-description{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'rym';
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: $rym-green;
+                    padding: 10px 25px;
+                    border: 1px solid $purple-2;
+                    background-color: $purple-2;
+                    border-radius: 5px;
+                    line-height: 1.5rem;
+                    margin: 0;
+                    padding: 15px;
+                    margin: 25px;
                     text-align: center;
                 }
             }
