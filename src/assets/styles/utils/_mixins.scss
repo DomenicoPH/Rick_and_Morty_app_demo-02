@@ -85,7 +85,8 @@
 @mixin scrollbarConfig {
     // Estilos para el scrollbar
   &::-webkit-scrollbar {
-    width: 25px;
+    width: 10px;
+    height: 20px;
   }
 
   &::-webkit-scrollbar-track {
@@ -99,6 +100,6 @@
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: $rym-blue;
+    filter: brightness(180deg);
   }
 }

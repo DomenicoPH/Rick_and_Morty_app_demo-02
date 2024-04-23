@@ -30,3 +30,8 @@ https://axios-http.com/docs/intro/
 
     npm i axios
 
+## RYM API endpoints:
+
+https://rickandmortyapi.com/api/character
+https://rickandmortyapi.com/api/location
+https://rickandmortyapi.com/api/episode

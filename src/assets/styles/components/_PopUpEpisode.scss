@@ -1,5 +1,6 @@
 @import '../utils/animaciones';
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .popup-ep-container{
     position: absolute;
@@ -91,6 +92,17 @@
                 text-align: center;
             }
 
+            .detail-ep-characters-title{
+                font-family: 'rym';
+                font-size: 1.2rem;
+                color: $purple-2;
+                padding: 35px 0px 0px 0px;
+                border-radius: 50px;
+                margin: auto;
+                width: 100%;
+                text-align: center;
+            }
+
             .detail-ep-databox{
                 
                 .detail-ep-data{
@@ -113,19 +125,31 @@
                     justify-content: center;
                     align-items: center;
                     font-family: 'rym';
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     font-weight: 500;
                     color: $rym-green;
                     padding: 10px 25px;
                     border: 1px solid $purple-2;
                     background-color: $purple-2;
                     border-radius: 5px;
-                    line-height: 1.5rem;
-                    margin: 0;
+                    line-height: 2.5rem;
                     padding: 15px;
                     margin: 25px;
+                    max-width: 80vw;
                     text-align: center;
                 }
+            }
+
+            .detail-ep-characters{
+                @include scrollbarConfig;
+                display: flex;
+                justify-content: flex-start;
+                max-width: 75vw;
+                overflow-x: auto;
+                background-color: $purple-2;
+                border: 3px solid $purple-2;
+                border-radius: 5px;
+                scale: 75%;
             }
 
         }
